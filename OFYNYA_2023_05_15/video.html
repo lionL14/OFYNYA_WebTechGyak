@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article, section, aside, nav, header, footer{
+            display: block;
+        }
+
+        .fejlec{
+            font-size: 18pt;
+            font-family: Helvetica;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .lablec{
+            width: 560px;
+            font-size: 10pt;
+            margin-top: 40px;
+            border-top: 3px double green;
+            padding-top: 30px;
+            text-align: right;
+            font-family: Helvetica;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header id="fejlec" class="fejlec">
+        Videó lejátszása
+    </header>
+    
+    <section id="tartalom">
+
+        <video id="videom" width="640" controls>
+            <source src="HTML5_video2.mp4" type="video/mp4">
+            A böngésződ nem támogatja a HTML videók lejátszását.
+        </video>
+    </section>
+    <br><br>
+
+    <button onclick="videom.play()">Inditás</button>
+    <button onclick="videom.pause()">Leállítás</button>
+    <button onclick="indit_leallit()">Inditás/leállítás</button>
+    <br><br>
+     
+</body>
+<Script>
+    var video = document.getElementById('videom');
+function indit_leallit(){
+    if (videom.paused) {
+      video.play();
+    } 
+    else {
+      videom.pause();
+    }
+}
+</Script>
+</html>
